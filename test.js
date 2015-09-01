@@ -2,20 +2,20 @@
 var test = require('ava');
 var pathExists = require('./');
 
-test('async', function (t) {
-	t.plan(2);
-
-	pathExists('test.js', function (err, exists) {
-		t.assert(exists);
+test('async - pass', function (t) {
+	return pathExists('test.js').then(function (exists) {
+		t.true(exists);
 	});
+});
 
-	pathExists('fail', function (err, exists) {
-		t.assert(!exists);
+test('async - fail', function (t) {
+	return pathExists('fail').then(function (exists) {
+		t.false(exists);
 	});
 });
 
 test('sync', function (t) {
-	t.assert(pathExists.sync('test.js'));
-	t.assert(!pathExists.sync('fail'));
+	t.true(pathExists.sync('test.js'));
+	t.false(pathExists.sync('fail'));
 	t.end();
 });
