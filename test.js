@@ -1,21 +1,15 @@
-'use strict';
-var test = require('ava');
-var pathExists = require('./');
+import test from 'ava';
+import fn from './';
 
-test('async - pass', function (t) {
-	return pathExists('test.js').then(function (exists) {
-		t.true(exists);
-	});
+test('async - pass', async t => {
+	t.true(await fn('test.js'));
 });
 
-test('async - fail', function (t) {
-	return pathExists('fail').then(function (exists) {
-		t.false(exists);
-	});
+test('async - fail', async t => {
+	t.false(await fn('fail'));
 });
 
-test('sync', function (t) {
-	t.true(pathExists.sync('test.js'));
-	t.false(pathExists.sync('fail'));
-	t.end();
+test('sync', t => {
+	t.true(fn.sync('test.js'));
+	t.false(fn.sync('fail'));
 });
