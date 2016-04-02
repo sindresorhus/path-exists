@@ -15,6 +15,9 @@
   "scripts": {
     "test": "xo && ava"
   },
+  "bin": {
+    "path-exists": "./cli.js"
+  },
   "files": [
     "index.js"
   ],
@@ -31,6 +34,7 @@
     "stat"
   ],
   "dependencies": {
+    "docopt": "^0.6.2",
     "pinkie-promise": "^2.0.0"
   },
   "devDependencies": {
