@@ -1,15 +1,12 @@
 import test from 'ava';
-import fn from './';
+import m from './';
 
-test('async - pass', async t => {
-	t.true(await fn('test.js'));
-});
-
-test('async - fail', async t => {
-	t.false(await fn('fail'));
+test('async', async t => {
+	t.true(await m('test.js'));
+	t.false(await m('fail'));
 });
 
 test('sync', t => {
-	t.true(fn.sync('test.js'));
-	t.false(fn.sync('fail'));
+	t.true(m.sync('test.js'));
+	t.false(m.sync('fail'));
 });
