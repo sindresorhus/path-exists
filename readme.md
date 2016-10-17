@@ -2,6 +2,8 @@
 
 > Check if a path exists
 
+NOTE: `fs.existsSync` has been un-deprecated in Node.js since 6.8.0. If you only need to check synchronously, this module is not needed.
+
 Because [`fs.exists()`](https://nodejs.org/api/fs.html#fs_fs_exists_path_callback) is being [deprecated](https://github.com/iojs/io.js/issues/103), but there's still a genuine use-case of being able to check if a path exists for other purposes than doing IO with it.
 
 Never use this before handling a file though:
