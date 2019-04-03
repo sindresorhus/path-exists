@@ -1,12 +1,12 @@
 import test from 'ava';
-import m from './';
+import pathExists from '.';
 
 test('async', async t => {
-	t.true(await m('test.js'));
-	t.false(await m('fail'));
+	t.true(await pathExists('test.js'));
+	t.false(await pathExists('fail'));
 });
 
 test('sync', t => {
-	t.true(m.sync('test.js'));
-	t.false(m.sync('fail'));
+	t.true(pathExists.sync('test.js'));
+	t.false(pathExists.sync('fail'));
 });
