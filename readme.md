@@ -14,7 +14,7 @@ Never use this before handling a file though:
 ## Install
 
 ```
-$ npm install --save path-exists
+$ npm install path-exists
 ```
 
 
@@ -24,10 +24,10 @@ $ npm install --save path-exists
 // foo.js
 const pathExists = require('path-exists');
 
-pathExists('foo.js').then(exists => {
-	console.log(exists);
+(async () => {
+	console.log(await pathExists('foo.js'));
 	//=> true
-});
+})();
 ```
 
 
