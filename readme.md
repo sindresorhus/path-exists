@@ -35,11 +35,11 @@ const pathExists = require('path-exists');
 
 ### pathExists(path)
 
-Returns a promise for a boolean of whether the path exists.
+Returns a `Promise<boolean>` of whether the path exists.
 
 ### pathExists.sync(path)
 
-Returns a boolean of whether the path exists.
+Returns a `boolean` of whether the path exists.
 
 
 ## Related

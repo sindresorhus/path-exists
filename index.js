@@ -8,7 +8,7 @@ module.exports = async path => {
 	try {
 		await pAccess(path);
 		return true;
-	} catch (error) {
+	} catch (_) {
 		return false;
 	}
 };
@@ -17,7 +17,7 @@ module.exports.sync = path => {
 	try {
 		fs.accessSync(path);
 		return true;
-	} catch (error) {
+	} catch (_) {
 		return false;
 	}
 };
