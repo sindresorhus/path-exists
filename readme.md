@@ -47,6 +47,14 @@ Returns a `boolean` of whether the path exists.
 - [path-exists-cli](https://github.com/sindresorhus/path-exists-cli) - CLI for this module
 
 
-## License
+---
 
-MIT © [Sindre Sorhus](https://sindresorhus.com)
+<div align="center">
+	<b>
+		<a href="https://tidelift.com/subscription/pkg/npm-path-exists?utm_source=npm-path-exists&utm_medium=referral&utm_campaign=readme">Get professional support for this package with a Tidelift subscription</a>
+	</b>
+	<br>
+	<sub>
+		Tidelift helps make open source sustainable for maintainers while giving companies<br>assurances about security, maintenance, and licensing for their dependencies.
+	</sub>
+</div>
