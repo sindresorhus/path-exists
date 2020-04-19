@@ -1,12 +1,9 @@
 'use strict';
 const fs = require('fs');
-const {promisify} = require('util');
-
-const pAccess = promisify(fs.access);
 
 module.exports = async path => {
 	try {
-		await pAccess(path);
+		await fs.promises.access(path);
 		return true;
 	} catch (_) {
 		return false;
