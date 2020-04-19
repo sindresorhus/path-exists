@@ -1,11 +1,9 @@
 'use strict';
 const fs = require('fs');
 
-const fsP = fs.promises;
-
 module.exports = async path => {
 	try {
-		await fsP.access(path);
+		await fs.promises.access(path);
 		return true;
 	} catch (_) {
 		return false;
