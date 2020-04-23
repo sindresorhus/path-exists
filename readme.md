@@ -1,4 +1,4 @@
-# path-exists [![Build Status](https://travis-ci.org/sindresorhus/path-exists.svg?branch=master)](https://travis-ci.org/sindresorhus/path-exists)
+# path-exists [![Build Status](https://travis-ci.com/sindresorhus/path-exists.svg?branch=master)](https://travis-ci.com/sindresorhus/path-exists)
 
 > Check if a path exists
 
@@ -8,13 +8,11 @@ Never use this before handling a file though:
 
 > In particular, checking if a file exists before opening it is an anti-pattern that leaves you vulnerable to race conditions: another process may remove the file between the calls to `fs.exists()` and `fs.open()`. Just open the file and handle the error when it's not there.
 
-
 ## Install
 
 ```
 $ npm install path-exists
 ```
-
 
 ## Usage
 
@@ -28,7 +26,6 @@ const pathExists = require('path-exists');
 })();
 ```
 
-
 ## API
 
 ### pathExists(path)
@@ -39,11 +36,10 @@ Returns a `Promise<boolean>` of whether the path exists.
 
 Returns a `boolean` of whether the path exists.
 
-
 ## Related
 
 - [path-exists-cli](https://github.com/sindresorhus/path-exists-cli) - CLI for this module
-
+- [path-type](https://github.com/sindresorhus/path-type) - Check if a path exists and whether it's a file, directory, or symlink
 
 ---
 
