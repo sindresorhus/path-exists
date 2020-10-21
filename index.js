@@ -5,7 +5,7 @@ module.exports = async path => {
 	try {
 		await fs.promises.access(path);
 		return true;
-	} catch (_) {
+	} catch {
 		return false;
 	}
 };
@@ -14,7 +14,7 @@ module.exports.sync = path => {
 	try {
 		fs.accessSync(path);
 		return true;
-	} catch (_) {
+	} catch {
 		return false;
 	}
 };
