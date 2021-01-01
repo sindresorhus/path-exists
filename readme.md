@@ -1,4 +1,4 @@
-# path-exists [![Build Status](https://travis-ci.com/sindresorhus/path-exists.svg?branch=master)](https://travis-ci.com/sindresorhus/path-exists)
+# path-exists
 
 > Check if a path exists
 
