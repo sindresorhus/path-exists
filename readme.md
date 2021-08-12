@@ -18,12 +18,10 @@ $ npm install path-exists
 
 ```js
 // foo.js
-const pathExists = require('path-exists');
+import {pathExists} from 'path-exists';
 
-(async () => {
-	console.log(await pathExists('foo.js'));
-	//=> true
-})();
+console.log(await pathExists('foo.js'));
+//=> true
 ```
 
 ## API
@@ -32,7 +30,7 @@ const pathExists = require('path-exists');
 
 Returns a `Promise<boolean>` of whether the path exists.
 
-### pathExists.sync(path)
+### pathExistsSync(path)
 
 Returns a `boolean` of whether the path exists.
 

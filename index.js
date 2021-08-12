@@ -1,20 +1,19 @@
-'use strict';
-const fs = require('fs');
+import fs, {promises as fsPromises} from 'node:fs';
 
-module.exports = async path => {
+export async function pathExists(path) {
 	try {
-		await fs.promises.access(path);
+		await fsPromises.access(path);
 		return true;
 	} catch {
 		return false;
 	}
-};
+}
 
-module.exports.sync = path => {
+export function pathExistsSync(path) {
 	try {
 		fs.accessSync(path);
 		return true;
 	} catch {
 		return false;
 	}
-};
+}
