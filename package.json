@@ -1,6 +1,6 @@
 {
 	"name": "path-exists",
-	"version": "4.0.0",
+	"version": "5.0.0",
 	"description": "Check if a path exists",
 	"license": "MIT",
 	"repository": "sindresorhus/path-exists",
